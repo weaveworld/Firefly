@@ -62,10 +62,10 @@ If a description contains an `<img data-ff src="`...`"`... part, then the result
 
 E.g., 
 ```
-<div><img data-ff src="?">
+<div><img data-ff-img src="?">
   <pre>page.image();
   <pre>page.click('Done');
-  <p><img data-ff src="?">
+  <p><img data-ff-img src="?">
   <pre>page.image();
 </div>  
 ```
@@ -85,14 +85,16 @@ Steps of test execution can be given in `<pre>` tags in JavaScript.
 - **Condition assertions** ('Check' assertions)
   - `EXPR1 ?? ;;` and `EXPR1 ??? ;;` - test if the value of the `EXPR1` is **true-ish** 
     - 'true-ish' means that the value is not undefined, not null, not 0, not "", not an empty array and not an empty object 
-    - e. g., `<pre> page.get('')`
+    - e. g., `<pre> page.get('error').exists() ??`
   - `EXPR1 ^?? ;;` and `EXPR1 ^??? ;;` - test if the value of the `EXPR1` is **false-ish**, i. e., not true-ish 
 
 - **Value assertions** ('Match' assertions)
   - `EXPR1 ?? EXPR2;;` and `EXPR1 ??? EXPR2 ;;` - compare if the values are **matched**
     - generally it checks if the value of the `EXPR1` **equals** to the asserted value of `EXPR2` 
+      - e.g., `page.get('css=h2') ?? 'Veterinarians'`
     - if the `EXPR2` asserted value is an **Array**
       - if the `EXPR1` is a **String**, it checks if `EXPR1` contains each `EXPR2` element as String 
+        - e.g., `page.get('2').css('text-decoration') ?? ['underline']`
       - if the `EXPR1` is an **Array**, it checks if `EXPR1` contains each `EXPR2` element  
       - otherwise it fails
     - if the `EXPR2` asserted value is an **Object**
