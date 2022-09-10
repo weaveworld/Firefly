@@ -8,6 +8,12 @@
 - An extensive **Firefly wrapper** around the [Selenium framework](https://www.selenium.dev/documentation/webdriver/) helps to simplify writing tests, even for highly dynamic Web pages.
 - [Result](doc/4_result.md) data can be easily processed.
 
-Firefly can be run from docker; see example:
-  - [Testing Spring's example PetClinic application](https://github.com/weaveworld/ff-spring-petclinic)
+## Testing
+
+Firefly can be run from docker.
+  - An example is [Testing Spring's example PetClinic application](https://github.com/weaveworld/ff-spring-petclinic)
+
+There are two Firefly docker images:
+  - [weaveworld/firefly-desktop](https://hub.docker.com/r/weaveworld/firefly-desktop) - A complete Ubuntu *Desktop* with the Firefox, Chrome and Edge *browsers*, the Selenium *drivers* and the Selenium *Server*, and also contains the **Firefly** environment. 
+  - [weaveworld/firefly](https://hub.docker.com/r/weaveworld/firefly) - An executable Firefly environment that can use other remote Selenium hosts, for example [Selenium images](https://github.com/SeleniumHQ/docker-selenium#standalone) or the [weaveworld/selenium](https://github.com/weaveworld/ubuntu-desktop#selenium-weaveworldselenium) image that contains the Firefox, Chrome, Edge *browsers* and the Selenium *drivers* and *Server*.
 
