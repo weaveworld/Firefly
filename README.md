@@ -14,6 +14,8 @@ Firefly can be run from docker.
   - An example is [Testing Spring's example PetClinic application](https://github.com/weaveworld/ff-spring-petclinic)
 
 There are two Firefly docker images:
-  - [weaveworld/firefly-desktop](https://hub.docker.com/r/weaveworld/firefly-desktop) - A complete Ubuntu *Desktop* with the Firefox, Chrome and Edge *browsers*, the Selenium *drivers* and the Selenium *Server*, and also contains the **Firefly** environment. 
-  - [weaveworld/firefly](https://hub.docker.com/r/weaveworld/firefly) - An executable Firefly environment that can use other remote Selenium hosts, for example [Selenium images](https://github.com/SeleniumHQ/docker-selenium#standalone) or the [weaveworld/selenium](https://github.com/weaveworld/ubuntu-desktop#selenium-weaveworldselenium) image that contains the Firefox, Chrome, Edge *browsers* and the Selenium *drivers* and *Server*.
+  - [weaveworld/firefly-desktop](https://hub.docker.com/r/weaveworld/firefly-desktop) - Ubuntu *Desktop* with Firefox, Chrome and Edge **browsers**, Selenium **drivers**, **Selenium Server** and the **Firefly** environment.
+  - [weaveworld/firefly](https://hub.docker.com/r/weaveworld/firefly) - Executable Firefly environment that can be used with other remote Selenium hosts, for example
+    - [Selenium docker images](https://github.com/SeleniumHQ/docker-selenium#standalone)
+    - [weaveworld/selenium](https://github.com/weaveworld/ubuntu-desktop#selenium-weaveworldselenium) image that contains the Firefox, Chrome, Edge *browsers*, Selenium *drivers* and *Server*.
 
